@@ -212,7 +212,7 @@ input[type="submit"] {
 .wp-block-button__link:hover,
 button:hover,
 input[type="submit"]:hover {
-  background: #e8660f;
+  /* background: #e8660f; */
   color: var(--white);
   transform: translateY(-2px);
   box-shadow: 0 12px 28px rgba(255, 122, 26, 0.35);
