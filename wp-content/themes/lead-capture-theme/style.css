@@ -3,3 +3,494 @@ Theme Name: Lead Capture
 Author: Riley
 Version: 1.0
 */
+
+/* =========================
+   Snowboard Lead Gen Theme
+   Clean, modern, mountain-focused
+========================= */
+
+/* Global */
+:root {
+  --snow: #f7fbff;
+  --ice: #dceeff;
+  --deep-blue: #0f2742;
+  --mountain-blue: #1d4f7a;
+  --accent: #ff7a1a;
+  --text: #1f2933;
+  --muted: #667085;
+  --white: #ffffff;
+  --shadow: 0 12px 30px rgba(15, 39, 66, 0.12);
+  --radius: 18px;
+}
+
+body {
+  background: var(--snow);
+  color: var(--text);
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  line-height: 1.65;
+  margin: 0;
+  padding: 0;
+}
+
+/* Layout */
+.site {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.content-area {
+  width: 100%;
+  padding: 2rem 1rem;
+  max-width: 100%;
+  box-sizing: border-box;
+}
+
+/* Responsive images */
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Flexbox utilities */
+.flex {
+  display: flex;
+}
+
+.flex-wrap {
+  flex-wrap: wrap;
+}
+
+.justify-center {
+  justify-content: center;
+}
+
+.align-center {
+  align-items: center;
+}
+
+.space-between {
+  justify-content: space-between;
+}
+
+h1, h2, h3, h4 {
+  color: var(--deep-blue);
+  line-height: 1.15;
+  font-weight: 800;
+}
+
+p {
+  color: var(--text);
+}
+
+a {
+  color: var(--mountain-blue);
+  text-decoration: none;
+}
+
+a:hover {
+  color: var(--accent);
+}
+
+/* Site container */
+.site,
+.site-content,
+.wp-site-blocks {
+  background: var(--snow);
+}
+
+/* Header / Navigation */
+.site-header,
+header {
+  background: var(--white);
+  box-shadow: 0 2px 14px rgba(15, 39, 66, 0.08);
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 0 1rem;
+}
+
+.site-branding {
+  padding: 1rem 0;
+}
+
+.site-title {
+  margin: 0;
+  font-size: 1.5rem;
+}
+
+.site-title a {
+  color: var(--deep-blue);
+  text-decoration: none;
+}
+
+.site-description {
+  margin: 0;
+  color: var(--muted);
+  font-size: 0.9rem;
+}
+
+.main-navigation {
+  position: relative;
+}
+
+.main-navigation ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+.main-navigation li {
+  position: relative;
+}
+
+.main-navigation a,
+.wp-block-navigation a {
+  color: var(--deep-blue);
+  font-weight: 700;
+  padding: 1rem;
+  display: block;
+}
+
+.main-navigation a:hover,
+.wp-block-navigation a:hover {
+  color: var(--accent);
+}
+
+/* Hero section */
+.hero,
+.wp-block-cover {
+  border-radius: var(--radius);
+  overflow: hidden;
+}
+
+.hero-content,
+.wp-block-cover__inner-container {
+  max-width: 850px;
+}
+
+.hero h1,
+.wp-block-cover h1 {
+  font-size: clamp(2.4rem, 6vw, 4.8rem);
+  color: var(--white);
+  text-shadow: 0 4px 18px rgba(0, 0, 0, 0.35);
+}
+
+.hero p,
+.wp-block-cover p {
+  font-size: 1.2rem;
+  color: var(--snow);
+}
+
+/* Buttons */
+.wp-block-button__link,
+button,
+input[type="submit"] {
+  background: var(--accent);
+  color: var(--white);
+  border-radius: 999px;
+  padding: 0.9rem 1.5rem;
+  font-weight: 800;
+  border: none;
+  box-shadow: 0 8px 20px rgba(255, 122, 26, 0.25);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.wp-block-button__link:hover,
+button:hover,
+input[type="submit"]:hover {
+  background: #e8660f;
+  color: var(--white);
+  transform: translateY(-2px);
+  box-shadow: 0 12px 28px rgba(255, 122, 26, 0.35);
+}
+
+/* Secondary button */
+.is-style-outline .wp-block-button__link {
+  background: transparent;
+  color: var(--deep-blue);
+  border: 2px solid var(--deep-blue);
+  box-shadow: none;
+}
+
+.is-style-outline .wp-block-button__link:hover {
+  background: var(--deep-blue);
+  color: var(--white);
+}
+
+/* Cards / service blocks */
+.service-card,
+.wp-block-group.card,
+.wp-block-column {
+  background: var(--white);
+  border-radius: var(--radius);
+  padding: 2rem;
+  box-shadow: var(--shadow);
+  border: 1px solid rgba(15, 39, 66, 0.08);
+}
+
+.service-card h3,
+.wp-block-column h3 {
+  color: var(--deep-blue);
+}
+
+/* WordPress Block Responsiveness */
+.wp-block-columns {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.wp-block-column {
+  flex: 1;
+  min-width: 250px;
+  margin-bottom: 1rem;
+}
+
+.wp-block-group {
+  margin-bottom: 2rem;
+}
+
+.wp-block-cover {
+  margin-bottom: 2rem;
+}
+
+.wp-block-button {
+  margin-bottom: 1rem;
+}
+
+/* Trust badges */
+.badge,
+.trust-badge {
+  display: inline-block;
+  background: var(--ice);
+  color: var(--deep-blue);
+  padding: 0.5rem 0.9rem;
+  border-radius: 999px;
+  font-weight: 800;
+  font-size: 0.9rem;
+  margin: 0.25rem;
+}
+
+/* Blog / posts */
+.post,
+.wp-block-post {
+  background: var(--white);
+  border-radius: var(--radius);
+  padding: 1.5rem;
+  box-shadow: var(--shadow);
+}
+
+.wp-block-post-title a {
+  color: var(--deep-blue);
+}
+
+.wp-block-post-title a:hover {
+  color: var(--accent);
+}
+
+.wp-block-post-excerpt {
+  color: var(--muted);
+}
+
+/* Single post content */
+.entry-content,
+.wp-block-post-content {
+  max-width: 760px;
+  margin-inline: auto;
+}
+
+.entry-content h2,
+.wp-block-post-content h2 {
+  margin-top: 2.5rem;
+  border-left: 5px solid var(--accent);
+  padding-left: 0.8rem;
+}
+
+/* Lead CTA box */
+.lead-cta {
+  background: linear-gradient(135deg, var(--deep-blue), var(--mountain-blue));
+  color: var(--white);
+  border-radius: var(--radius);
+  padding: 2rem;
+  margin: 3rem 0;
+  box-shadow: var(--shadow);
+}
+
+.lead-cta h2,
+.lead-cta h3,
+.lead-cta p {
+  color: var(--white);
+}
+
+.lead-cta .wp-block-button__link {
+  background: var(--accent);
+}
+
+/* Forms */
+input,
+textarea,
+select {
+  width: 100%;
+  border: 1px solid #cbd5e1;
+  border-radius: 12px;
+  padding: 0.85rem 1rem;
+  font-size: 1rem;
+  background: var(--white);
+}
+
+input:focus,
+textarea:focus,
+select:focus {
+  outline: none;
+  border-color: var(--mountain-blue);
+  box-shadow: 0 0 0 4px rgba(29, 79, 122, 0.12);
+}
+
+label {
+  font-weight: 700;
+  color: var(--deep-blue);
+}
+
+/* Footer */
+.site-footer,
+footer {
+  background: var(--deep-blue);
+  color: var(--snow);
+  padding: 2rem 1rem;
+  text-align: center;
+}
+
+.site-footer a,
+footer a {
+  color: var(--ice);
+}
+
+.site-footer a:hover,
+footer a:hover {
+  color: var(--accent);
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .section,
+  .wp-block-group {
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+  }
+
+  .service-card,
+  .wp-block-group.card,
+  .wp-block-column {
+    padding: 1.4rem;
+  }
+
+  .hero h1,
+  .wp-block-cover h1 {
+    font-size: 2.4rem;
+  }
+
+  /* Navigation */
+  .main-navigation ul {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background: var(--white);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    padding: 1rem 0;
+  }
+
+  .main-navigation.toggled ul {
+    display: flex;
+  }
+
+  .main-navigation li {
+    width: 100%;
+    text-align: center;
+  }
+
+  .main-navigation a {
+    display: block;
+    padding: 1rem;
+  }
+
+  .menu-toggle {
+    display: block;
+    background: none;
+    border: none;
+    font-size: 1.2rem;
+    cursor: pointer;
+    padding: 0.5rem;
+  }
+
+  /* Hide menu toggle on desktop */
+  @media (min-width: 769px) {
+    .menu-toggle {
+      display: none;
+    }
+  }
+
+  /* Buttons */
+  .wp-block-button__link,
+  button,
+  input[type="submit"] {
+    width: 100%;
+    text-align: center;
+  }
+
+  /* Forms */
+  input,
+  textarea,
+  select {
+    font-size: 16px; /* Prevent zoom on iOS */
+  }
+
+  /* Cards */
+  .wp-block-columns {
+    flex-direction: column;
+  }
+
+  .wp-block-column {
+    margin-bottom: 1rem;
+  }
+
+  /* Hero content */
+  .hero-content,
+  .wp-block-cover__inner-container {
+    padding: 1rem;
+  }
+
+  /* Lead CTA */
+  .lead-cta {
+    margin: 2rem 1rem;
+    padding: 1.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero h1,
+  .wp-block-cover h1 {
+    font-size: 2rem;
+  }
+
+  .hero p,
+  .wp-block-cover p {
+    font-size: 1rem;
+  }
+
+  .service-card,
+  .wp-block-group.card,
+  .wp-block-column {
+    padding: 1rem;
+  }
+
+  .lead-cta {
+    margin: 1rem;
+    padding: 1rem;
+  }
+}
