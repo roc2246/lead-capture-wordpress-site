@@ -9,7 +9,7 @@ function post_types() {
     'has_archive' => true,
     'public' => true,
     'labels' => array(
-      'name' => 'tips',
+      'name' => 'Tips',
       'add_new_item' => 'Add New Tip',
       'edit_item' => 'Edit Tip',
       'all_items' => 'All Tips',
