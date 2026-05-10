@@ -1,54 +1,23 @@
 <?php
 
 function post_types() {
-  // Event Post Type
-  register_post_type('event', array(
+  // Tip Post Type
+  register_post_type('Tips', array(
     'show_in_rest' => true,
     'supports' => array('title', 'editor', 'excerpt'),
-    'rewrite' => array('slug' => 'events'),
+    'rewrite' => array('slug' => 'tips'),
     'has_archive' => true,
     'public' => true,
     'labels' => array(
-      'name' => 'Events',
-      'add_new_item' => 'Add New Event',
-      'edit_item' => 'Edit Event',
-      'all_items' => 'All Events',
-      'singular_name' => 'Event'
+      'name' => 'tips',
+      'add_new_item' => 'Add New Tip',
+      'edit_item' => 'Edit Tip',
+      'all_items' => 'All Tips',
+      'singular_name' => 'Tip'
     ),
-    'menu_icon' => 'dashicons-calendar'
+    'menu_icon' => 'dashicons-performance',
   ));
 
-  // Program Post Type
-  register_post_type('program', array(
-    'show_in_rest' => true,
-    'supports' => array('title', 'editor'),
-    'rewrite' => array('slug' => 'programs'),
-    'has_archive' => true,
-    'public' => true,
-    'labels' => array(
-      'name' => 'Programs',
-      'add_new_item' => 'Add New Program',
-      'edit_item' => 'Edit Program',
-      'all_items' => 'All Programs',
-      'singular_name' => 'Program'
-    ),
-    'menu_icon' => 'dashicons-awards'
-  ));
-
-  // Professor Post Type
-  register_post_type('professor', array(
-    'show_in_rest' => true,
-    'supports' => array('title', 'editor', 'thumbnail'),
-    'public' => true,
-    'labels' => array(
-      'name' => 'Professors',
-      'add_new_item' => 'Add New Professor',
-      'edit_item' => 'Edit Professor',
-      'all_items' => 'All Professors',
-      'singular_name' => 'Professor'
-    ),
-    'menu_icon' => 'dashicons-welcome-learn-more'
-  ));
 }
 
 add_action('init', 'post_types');
